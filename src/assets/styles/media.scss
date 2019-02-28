@@ -1,0 +1,32 @@
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .menu {
+        padding-left: 0;
+        padding-right: 0;
+
+        &__logo {
+            max-width: 50vw;
+        }
+
+        &__toggler {
+            color: #454646;
+        }
+
+        &__list {
+            background: none;
+            border-bottom: none;
+            &__item {
+                margin-right: 40px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &__link {
+                    padding-top: 43px;
+                    padding-bottom: 43px;
+                }
+            }
+        }
+    }
+}

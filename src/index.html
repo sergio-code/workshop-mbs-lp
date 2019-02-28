@@ -4,10 +4,222 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Document</title>
+        <title>McGrew Behavior Services</title>
+        <!-- Cute summerish Polish font -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900" rel="stylesheet" />
+        <!-- bootstrap -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+        <!-- animate.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+        <!-- compiled styles -->
         <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>" />
     </head>
     <body>
+        <header class="header" id="header">
+            <div class="container">
+                <nav class="menu navbar navbar-expand-md animated fadeInDown">
+                    <a class="navbar-brand" href="/">
+                        <img
+                            src="<%= require('./assets/images/logo.png') %>"
+                            alt="Tinyone"
+                            class="d-inline-block menu__logo"
+                        />
+                    </a>
+                    <button
+                        class="navbar-toggler menu__toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#myNavbar"
+                        aria-controls="myNavbar"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        ☰
+                    </button>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="menu__list navbar-nav ml-auto">
+                            <li class="nav-item menu__list__item active">
+                                <a class="nav-link menu__list__item__link" href="/">HOME</a>
+                            </li>
+                            <li class="nav-item menu__list__item">
+                                <a class="nav-link menu__list__item__link" href="#mission">ABOUT&nbsp;US</a>
+                            </li>
+                            <li class="nav-item menu__list__item">
+                                <a class="nav-link menu__list__item__link" href="#contacts">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 offer">
+                        <h1 class="offer__title">We can <span class="offer__title--underline">help</span>.</h1>
+                        <p class="offer__description">
+                            Teaching independence to the lives of the people you love with reliable, individualized
+                            emotional and behavioral therapy.
+                        </p>
+                        <button class="offer__btn mbs-button">
+                            FIND HELP HERE
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="container d-flex justify-content-between align-items-center partners" id="partners">
+            <div class="row">
+                <div class="col-12">
+                    <img
+                        src="<%= require('./assets/images/magellan.png') %>"
+                        alt="magelan health"
+                        class="partners__partner"
+                    />
+                    <img
+                        src="<%= require('./assets/images/kaiser.png') %>"
+                        alt="kaiser permanente"
+                        class="partners__partner"
+                    />
+                    <img src="<%= require('./assets/images/anthem.png') %>" alt="anthem" class="partners__partner" />
+                    <img
+                        src="<%= require('./assets/images/northbay.png') %>"
+                        alt="northbay center"
+                        class="partners__partner"
+                    />
+                    <img
+                        src="<%= require('./assets/images/cahp.png') %>"
+                        alt="ca health plan"
+                        class="partners__partner"
+                    />
+                    <img src="<%= require('./assets/images/aetna.png') %>" alt="magelan" class="partners__partner" />
+                </div>
+            </div>
+        </section>
+        <section class="age" id="age">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 mx-auto">
+                        <h2 class="age__title">Support For People Of All Walks of Life</h2>
+                        <p class="age__info">
+                            Children as young as 2 years old may begin to develop behaviors which need extra support and
+                            attention.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mission" id="mission">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-lg-8 mx-auto">
+                        <h3 class="mission__title">McGrew Behavior Services Helps...</h3>
+                        <p class="mission__info">
+                            Families, organizations and health care providers in Northern California. Our knowledge and
+                            experience provide the specialized support people need when overcoming behavioral
+                            challenges.
+                        </p>
+                        <a href="#contacts" class="mission__btn mbs-button">CONTACT US</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="photo">
+            <div class="container-fluid photo__block">
+                <img
+                    class="photo__block__img"
+                    src="<%= require('./assets/images/educational-game.jpg') %>"
+                    alt="educational game women and child"
+                />
+            </div>
+        </section>
+        <section class="join-team" id="join-team">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-0 col-md-6 join-team__photo"></div>
+                    <div class="col-md-6 join-team__block">
+                        <p class="join-team__block__intro">
+                            Be a part of something bigger than yourself. Make a difference.
+                        </p>
+                        <h2 class="join-team__block__title">
+                            Join Our <span class="join-team__block__title--underline">Team</span>.
+                        </h2>
+                        <p class="join-team__block__description">
+                            We are always looking for highly motivated individuals who aligned with our committment to
+                            making a difference in the lives of other people. Whether you’re a BCBA or interested in ABA
+                            work we are interested in talking to you!
+                        </p>
+                        <a href="#" class="join-team__block__btn mbs-button--cyan">
+                            FIND WHAT’S AVAILABLE
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="row footer__menu">
+                    <div class="col-md-8 col-lg-6 mx-auto">
+                        <nav>
+                            <ul class="footer__menu__items">
+                                <li class="footer__menu__items__item"><a href="/">HOME</a></li>
+                                <li class="footer__menu__items__item"><a href="#mission">ABOUT US</a></li>
+                                <li class="footer__menu__items__item"><a href="#contacts">CONTACT</a></li>
+                                <li class="footer__menu__items__item"><a href="#join-team">CAREERS</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="mbs-spacer"></div>
+                <div itemscope itemtype="http://schema.org/Organization">
+                    <div class="footer__contacts" id="contacts">
+                        <div
+                            class="footer__contacts__address"
+                            itemprop="address"
+                            itemscope
+                            itemtype="http://schema.org/PostalAddress"
+                        >
+                            <span itemprop="streetAddress">120 Theresa Ave</span>,
+                            <span itemprop="addressLocality">American Canyon</span>,
+                            <span itemprop="postalCode">CA 94503</span>
+                        </div>
+                        <div>
+                            <span itemprop="telephone">707.561.0134</span>
+                        </div>
+                        <a class="footer__contacts__email" itemprop="email" href="mailto:familyresources@mbisinc.com"
+                            >familyresources@mbisinc.com</a
+                        >
+                    </div>
+                    <div class="row footer__copyrights">
+                        <div class="col-sm-8 mx-auto footer__copyrights__content">
+                            Copyright Ⓒ 2017
+                            <span itemprop="name">McGrews&nbsp;Behavior&nbsp;Services</span>
+                            All&nbsp;Rights&nbsp;Reserved
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- bootstrap scripts -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+        <!-- main script -->
         <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
     </body>
 </html>

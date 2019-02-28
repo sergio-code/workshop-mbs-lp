@@ -1,0 +1,322 @@
+// color palette
+$cyan: #00b5d2;
+$palebrown: #e1aa6e;
+$white: #ffffff;
+$deepcyan: #008ea5;
+$paleblue: #1b97c5;
+$blue: #367ab7;
+$deeppalebrown: #ba8e5b;
+$deepgray: #999999;
+$deepgray2: #aaaaaa;
+
+@mixin mbs-button($color: $palebrown, $shadow_color: $deeppalebrown) {
+    // suitable for "button" and "a" elements
+    display: inline-block;
+    line-height: 70px;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+    padding: 0 1em;
+    width: 285px;
+    max-width: 100%;
+    overflow: hidden;
+    min-height: 70px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: $color;
+    border: none;
+    border-bottom: 10px solid $shadow_color;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: $white;
+
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.mbs-button {
+    @include mbs-button;
+}
+
+.mbs-button--cyan {
+    @include mbs-button($cyan, $deepcyan);
+}
+
+.mbs-spacer {
+    margin: 50px auto;
+    content: "";
+    position: relative;
+    width: 13px;
+    height: 13px;
+    background-color: #eeeeee;
+
+    &:after, &:before {
+        content: "";
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        background-color: #eeeeee;
+    }
+
+    &:before {
+        top: 0;
+        right: 40px;
+    }
+
+    &:after {
+        top: 0;
+        left: 40px;
+    }
+}
+
+body {
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: $white;
+}
+
+h1, h2 {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.header {
+    background: #cf7747 url("../images/hero-bg.jpg") no-repeat center (top / cover);
+    min-height: 100vh;
+}
+
+.menu {
+    padding-left: 0;
+    padding-right: 0;
+
+    &__logo {
+        max-width: 50vw;
+    }
+
+    &__toggler {
+        color: #454646;
+    }
+
+    &__list {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-bottom: 10px solid rgba(0, 0, 0, 0.4);
+        &__item {
+            text-align: center;
+            a {
+                text-align: inherit;
+            }
+            &.active {
+                a {
+                    color: $white;
+                    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.35);
+                    border-bottom: 5px solid $cyan;
+                }
+            }
+
+            &__link {
+                color: #454546;
+                font-size: 16px;
+                font-weight: 400;
+                text-transform: uppercase;
+                padding-top: 23px;
+                padding-bottom: 23px;
+
+                &:hover {
+                    color: $white;
+                    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.35);
+                }
+            }
+        }
+    }
+}
+
+.offer {
+    padding-top: 130px;
+    padding-bottom: 130px;
+
+    &__title {
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+        width: 6em;
+
+        &--underline {
+            padding-bottom: 0.4em;
+            border-bottom: 4px solid $cyan;
+        }
+    }
+
+    &__description {
+        margin-top: 44px;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    &__btn {
+        margin-top: 46px;
+    }
+}
+
+.partners {
+    min-height: 100px;
+    text-align: center;
+    line-height: 100px;
+
+    &__partner {
+        margin-right: 25px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.age {
+    &__title {
+        margin-bottom: 0.85em;
+    }
+
+    min-height: 500px;
+    padding-top: 100px;
+    padding-bottom: 231px;
+    text-align: center;
+    background-color: $cyan;
+    background-clip: padding-box; // color
+    background-image: url("../images/ages.png");
+    background-origin: border-box; // picture
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    border-bottom: 1px solid white;
+}
+
+.mission {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    &__title {
+        margin-bottom: 1.6em;
+        color: #777777;
+    }
+
+    &__info {
+        margin-bottom: 42px;
+        color: #444444;
+    }
+}
+
+.photo {
+    background-color: $paleblue;
+    background-image: url("../images/photo-bg.png"), url("../images/white-111x50.png");
+    background-repeat: no-repeat, repeat-x;
+    background-position: center top, left bottom;
+    background-size: cover, auto;
+
+    &__block {
+        text-align: center;
+        padding-top: 12.5%;
+        padding-bottom: 63px;
+
+        &__img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            border: 8px solid $white;
+        }
+    }
+}
+
+.join-team {
+    &__photo {
+        background: url("../images/team.png") no-repeat left (top / cover);
+    }
+
+    &__block {
+        background-color: $blue;
+        padding-top: 40px;
+        padding-bottom: 42px;
+        padding-left: 30px;
+
+        &__intro {
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        &__title {
+            margin-top: 40px;
+            margin-bottom: 40px;
+
+            &--underline {
+                border-bottom: 4px solid $cyan;
+                padding-bottom: 0.4em;
+            }
+        }
+
+        &__description {
+            margin-top: 40px;
+            margin-bottom: 45px;
+            max-width: 90%;
+        }
+    }
+}
+
+.footer {
+    color: $deepgray2;
+    margin-top: 59px;
+    border-top: 3px solid #cccccc;
+    text-align: center;
+
+    &__menu {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        color: $deepgray;
+
+        &__items {
+            display: flex;
+            justify-content: space-around;
+
+            &__item {
+                font-size: 16px;
+                font-weight: 700;
+                display: block;
+
+                a {
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    &__contacts {
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        & > * {
+            margin-top: 22px;
+            margin-bottom: 22px;
+        }
+
+        &__email {
+            color: $palebrown;
+        }
+    }
+
+    &__copyrights {
+        &__content {
+            padding-top: 34px;
+            padding-bottom: 34px;
+            border-top: 1px solid #eeeeee;
+        }
+
+        margin-bottom: 20px;
+    }
+}
+
+@import "./media.scss"
