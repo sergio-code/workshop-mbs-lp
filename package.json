@@ -8,7 +8,7 @@
         "dev:open": "webpack-dev-server --mode development --open",
         "build": "webpack --mode production",
         "watch": "webpack --mode development --watch",
-        "deploy": "yarn build && surge --domain https://wayup-ws-tinyone.surge.sh dist/"
+        "deploy": "yarn build && surge --domain https://mgbs.surge.sh dist/"
     },
     "devDependencies": {
         "@babel/core": "^7.2.2",
