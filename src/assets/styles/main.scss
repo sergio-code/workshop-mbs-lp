@@ -279,11 +279,14 @@ h3 {
         color: $deepgray;
 
         &__items {
+            padding: 0;
+            margin: 0;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
 
             &__item {
+                margin: 0.5em 1em;
                 font-size: 16px;
                 font-weight: 700;
                 display: block;
