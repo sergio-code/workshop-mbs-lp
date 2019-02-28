@@ -1,5 +1,10 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+
+    h1, h2 {
+        font-size: 48px;
+    }
+
     .menu {
         padding-left: 0;
         padding-right: 0;
@@ -26,6 +31,19 @@
                     padding-top: 43px;
                     padding-bottom: 43px;
                 }
+            }
+        }
+    }
+
+    .partners {
+        min-height: 100px;
+        line-height: 100px;
+        &__partner {
+            max-width: 100%;
+            margin-right: 25px;
+
+            &:last-child {
+                margin-right: 0;
             }
         }
     }
