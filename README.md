@@ -4,9 +4,13 @@ Adaptive "McGrew Behavior Services" landing page.
 - Bootstrap 4
 - Webpack
 - SCSS
+- PostCSS (Autoprefixer)
 - animate.css
 
 PSD file located in ./layout folder
+
+## Todo
+- make menu overlay on small devices
 
 ## Result
 https://mgbs.surge.sh/
