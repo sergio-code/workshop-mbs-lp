@@ -2,6 +2,8 @@ const path = require("path")
 const CleanWebpackPlugin = require("clean-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 const WebpackChunkHash = require("webpack-chunk-hash")
 // const nodeExternals = require("webpack-node-externals") // for target: "node"
 
@@ -9,7 +11,7 @@ module.exports = {
     target: "web",
     // externals: [nodeExternals()],  // for target: "node"
     externals: {
-        jquery: 'jQuery'
+        jquery: "jQuery"
     },
     devServer: {
         // Parse host and port from env to allow customization.
@@ -22,13 +24,23 @@ module.exports = {
         stats: "errors-only", // Display only errors to reduce the amount of output.
         contentBase: path.resolve(__dirname, "src"),
         inline: true, // script will be inserted in your bundle to take care of live reloading
-        watchContentBase: true,
+        watchContentBase: true
         // historyApiFallback: // for HTML5 History API based routing
     },
     entry: { main: "./src/scripts/main.js" },
     output: {
         path: path.resolve(__dirname, "dist/"),
         filename: "assets/scripts/[name].[chunkhash].js"
+    },
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                sourceMap: true // set to true if you want JS source maps
+            }),
+            new OptimizeCSSAssetsPlugin({})
+        ]
     },
     module: {
         rules: [
